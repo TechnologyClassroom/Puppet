@@ -1,0 +1,30 @@
+Using facter, I can find those variables for systems.
+
+For Macs Mavericks
+os => {
+	family => "Darwin",
+	macosx => {
+		product => "Mac OS X",
+		version => {
+			full => "10.9.5",
+			major => "10.9",
+			minor => "5:
+		)
+	}
+	name => "Darwin",
+	release => {
+		full => "13.4.0",
+		major => "13",
+		minor => "4",
+	}
+}
+	
+For Windows 8.1
+os => {
+	family => "windows",
+	name => "windows",
+	release => {
+		full => "8.1",
+		major => "8.1"
+	}
+}
