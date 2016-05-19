@@ -18,6 +18,16 @@ os => {
 		minor => "4",
 	}
 }
+
+For Windows 7
+os => {
+	name	=> "windows"
+	family	=> "windows"
+	release => {
+		major => "7"
+		full =>"7"
+		}
+	}
 	
 For Windows 8.1
 os => {
