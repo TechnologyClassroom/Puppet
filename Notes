@@ -1,6 +1,17 @@
 Using facter, I can find those variables for systems.
 
-For Macs Mavericks
+GNU/Linux Ubuntu / Ubuntu Touch
+os => {
+	family => "Debian",
+	name => "Ubuntu",
+	release => {
+		full => "16.04",
+		major => "16.04",
+	}
+}
+
+
+Mac OS X Mavericks
 os => {
 	family => "Darwin",
 	macosx => {
@@ -19,7 +30,7 @@ os => {
 	}
 }
 
-For Windows 7
+Windows 7
 os => {
 	name	=> "windows"
 	family	=> "windows"
@@ -29,7 +40,7 @@ os => {
 		}
 	}
 	
-For Windows 8.1
+Windows 8.1
 os => {
 	family => "windows",
 	name => "windows",
