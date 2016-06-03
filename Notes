@@ -1,4 +1,4 @@
-Using facter, I can find those variables for systems.
+Using facter, I can find variables for systems.
 
 GNU/Linux Ubuntu / Ubuntu Touch
 os => {
@@ -49,3 +49,36 @@ os => {
 		major => "8.1"
 	}
 }
+
+
+
+Scheduled Tasks for Windows
+https://docs.puppet.com/puppet/4.5/reference/type.html#scheduledtask
+
+
+
+Scheduling cronjobs on GNU/Linux and Mac and 
+https://docs.puppet.com/puppet/latest/reference/type.html#cron
+
+'0-4,6' not friday and 5 friday
+weekday => '0-4,6' # Not Friday
+weekday => 5 # Friday
+
+cron { 'resource title':
+  ensure      => present
+  command     => # The command to execute in the cron job.  The...
+  environment => # Any environment settings associated with this...
+  hour        => # The hour at which to run the cron job. Optional; 
+  minute      => # The minute at which to run the cron job...
+  month       => # The month of the year.  Optional; if specified...
+  monthday    => # The day of the month on which to run the...
+  provider    => # The specific backend to use for this `cron...
+  special     => # A special value such as 'reboot' or 'annually'...
+  target      => # The name of the crontab file in which the cron...
+  user        => # The user who owns the cron job.  This user must...
+  weekday     => '0-4,6'
+}
+
+
+
+https://ask.puppet.com/question/1931/how-can-i-copy-client-files-to-a-puppet-master/
