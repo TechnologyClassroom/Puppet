@@ -57,7 +57,17 @@ https://docs.puppet.com/puppet/4.5/reference/type.html#scheduledtask
 
 
 
-Scheduling cronjobs on GNU/Linux and Mac and 
+Scheduling tasks on GNU/Linux and Mac
+https://docs.puppet.com/puppet/latest/reference/types/service.html
+
+Launchd (Mac)
+https://docs.puppet.com/puppet/latest/reference/types/service.html#service-provider-launchd
+https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/Introduction.html
+
+Systemd
+https://docs.puppet.com/puppet/latest/reference/types/service.html#service-provider-systemd
+
+Cron
 https://docs.puppet.com/puppet/latest/reference/type.html#cron
 
 '0-4,6' not friday and 5 friday
@@ -78,7 +88,6 @@ cron { 'resource title':
   user        => # The user who owns the cron job.  This user must...
   weekday     => '0-4,6'
 }
-
 
 
 https://ask.puppet.com/question/1931/how-can-i-copy-client-files-to-a-puppet-master/
