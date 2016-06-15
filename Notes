@@ -76,7 +76,7 @@ weekday => 5 # Friday
 
 cron { 'resource title':
   ensure      => present
-  command     => # The command to execute in the cron job.  The...
+  command     => 'sh /etc/updatehosts.sh'
   environment => # Any environment settings associated with this...
   hour        => # The hour at which to run the cron job. Optional; 
   minute      => # The minute at which to run the cron job...
@@ -100,6 +100,49 @@ file_line { 'Download HOSTSFunix':
   path => '/etc/updatehosts.sh',
   ensure => present,
   line => 'curl -o /etc/HOSTSFunix.txt https://raw.githubusercontent.com/BlueHillBGCB/HOSTS/master/HOSTSFunix.txt',
+}
+
+file_line { 'Download HOSTSMTWRunix':
+  path => '/etc/updatehosts.sh',
+  ensure => present,
+  line => 'curl -o /etc/HOSTSMTWRunix.txt https://raw.githubusercontent.com/BlueHillBGCB/HOSTS/master/HOSTSMTWRunix.txt',
+}
+
+file_line { 'Download HOSTSFunixLS':
+  path => '/etc/updatehosts.sh',
+  ensure => present,
+  line => 'curl -o /etc/HOSTSFunixLS.txt https://raw.githubusercontent.com/BlueHillBGCB/HOSTS/master/HOSTSFunixLS.txt',
+}
+
+file_line { 'Download HOSTSMTWRunixLS':
+  path => '/etc/updatehosts.sh',
+  ensure => present,
+  line => 'curl -o /etc/HOSTSMTWRunixLS.txt https://raw.githubusercontent.com/BlueHillBGCB/HOSTS/master/HOSTSMTWRunixLS.txt',
+}
+
+file { '/etc/HOSTSFunixcp.sh':
+  ensure => present,
+}
+
+file_line { 'Copy HOSTSFunix':
+  path => '/etc/HOSTSFunixcp.sh',
+  ensure => present,
+  line => 'CP /etc/HOSTSFunix.txt /etc/hosts',
+}
+
+cron { 'CopyHOSTSFunix':
+  ensure      => present
+  command     => 'sh /etc/HOSTSFunixcp.sh'
+  environment => # Any environment settings associated with this...
+  hour        => '15'
+  minute      => # The minute at which to run the cron job...
+  month       => # The month of the year.  Optional; if specified...
+  monthday    => # The day of the month on which to run the...
+  provider    => # The specific backend to use for this `cron...
+  special     => # A special value such as 'reboot' or 'annually'...
+  target      => # The name of the crontab file in which the cron...
+  user        => # The user who owns the cron job.  This user must...
+  weekday     => '0-4,6'
 }
 
 https://ask.puppet.com/question/1931/how-can-i-copy-client-files-to-a-puppet-master/
