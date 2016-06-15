@@ -75,6 +75,7 @@ cron { 'CopyHOSTSMTWRunix':
   command     => 'sh /etc/HOSTSMTWRunixcp.sh',
   require => File_line ['cpHOSTSMTWRunix'],
   user        => 'root',
+  hour        => '*/1',
   weekday     => '0,1,2,3,4,6',
 }
 
@@ -83,5 +84,6 @@ cron { 'CopyHOSTSFunix':
   command     => 'sh /etc/HOSTSFunixcp.sh',
   require => File_line ['cpHOSTSFunix'],
   user        => 'root',
+  hour        => '*/1',
   weekday     => '5',
 }
