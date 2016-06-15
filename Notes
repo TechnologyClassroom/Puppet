@@ -52,27 +52,30 @@ os => {
 
 su Computer\ Clubhouse -c sudo\ /opt/puppetlabs/bin/puppet\ apply\ /Users/bluehill/Downloads/Puppet-master/OSXhosts.pp
 
-Scheduled Tasks for Windows
+# Classes and parameterized classes
+https://docs.puppet.com/puppet/latest/reference/lang_classes.html
+
+# Scheduled Tasks for Windows
 https://docs.puppet.com/puppet/4.5/reference/type.html#scheduledtask
 
+# Gepetto IDE
+https://github.com/puppetlabs/geppetto
 
+# Boilerplates
+https://github.com/example42/Example42-templates
 
-Scheduling tasks on GNU/Linux and Mac
+# Scheduling tasks on GNU/Linux and Mac
 https://docs.puppet.com/puppet/latest/reference/types/service.html
 
-Launchd (Mac)
+# Launchd (Mac)
 https://docs.puppet.com/puppet/latest/reference/types/service.html#service-provider-launchd
 https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/Introduction.html
 
-Systemd
+# Systemd
 https://docs.puppet.com/puppet/latest/reference/types/service.html#service-provider-systemd
 
-Cron
+# Cron
 https://docs.puppet.com/puppet/latest/reference/type.html#cron
-
-'0-4,6' not friday and 5 friday
-weekday => '0-4,6' # Not Friday
-weekday => 5 # Friday
 
 cron { 'resource title':
   ensure      => present
