@@ -127,14 +127,14 @@ file { '/etc/HOSTSFunixcp.sh':
 file_line { 'Copy HOSTSFunix':
   path => '/etc/HOSTSFunixcp.sh',
   ensure => present,
-  line => 'CP /etc/HOSTSFunix.txt /etc/hosts',
+  line => 'cp /etc/HOSTSFunix.txt /etc/hosts',
 }
 
 cron { 'CopyHOSTSFunix':
-  ensure      => present
-  command     => 'sh /etc/HOSTSFunixcp.sh'
+  ensure      => present,
+  command     => 'sh /etc/HOSTSFunixcp.sh',
   environment => # Any environment settings associated with this...
-  hour        => '15'
+  hour        => '15',
   minute      => # The minute at which to run the cron job...
   month       => # The month of the year.  Optional; if specified...
   monthday    => # The day of the month on which to run the...
@@ -142,7 +142,7 @@ cron { 'CopyHOSTSFunix':
   special     => # A special value such as 'reboot' or 'annually'...
   target      => # The name of the crontab file in which the cron...
   user        => # The user who owns the cron job.  This user must...
-  weekday     => '0-4,6'
+  weekday     => '0-4',
 }
 
 https://ask.puppet.com/question/1931/how-can-i-copy-client-files-to-a-puppet-master/
