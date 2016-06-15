@@ -72,13 +72,21 @@ file_line { 'cpHOSTSMTWRunixLS':
   require => File['/etc/HOSTSMTWRunixLScp.sh'],
 }
 
+cron { 'cronupdatehosts':
+  ensure      => present,
+  command     => 'sh /etc/updatehosts.sh',
+  require => File ['/etc/updatehosts.sh'],
+  user        => 'root',
+  hour        => '*/1',
+}
+
 cron { 'CopyHOSTSMTWRunix':
   ensure      => present,
   command     => 'sh /etc/HOSTSMTWRunixcp.sh',
   require => File_line ['cpHOSTSMTWRunix'],
   user        => 'root',
   hour        => '*/1',
-  weekday     => '0,1,2,3,4,6',
+  weekday     => '0-4',
 }
 
 cron { 'CopyHOSTSFunix':
