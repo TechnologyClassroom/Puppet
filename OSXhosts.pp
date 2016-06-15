@@ -1,3 +1,5 @@
+# This manifest is in the beta testing phase.
+
 file { '/etc/updatehosts.sh':
   ensure => present,
 }
