@@ -89,5 +89,17 @@ cron { 'resource title':
   weekday     => '0-4,6'
 }
 
+# Install file_line
+sudo puppet module install puppetlabs-stdlib
+
+file { '/etc/updatehosts.sh':
+  ensure => present,
+}
+
+file_line { 'Download HOSTSFunix':
+  path => '/etc/updatehosts.sh',
+  ensure => present,
+  line => 'curl -o /etc/HOSTSFunix.txt https://raw.githubusercontent.com/BlueHillBGCB/HOSTS/master/HOSTSFunix.txt',
+}
 
 https://ask.puppet.com/question/1931/how-can-i-copy-client-files-to-a-puppet-master/
