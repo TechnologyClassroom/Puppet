@@ -124,25 +124,76 @@ file { '/etc/HOSTSFunixcp.sh':
   ensure => present,
 }
 
-file_line { 'Copy HOSTSFunix':
+file_line { 'cpHOSTSFunix':
   path => '/etc/HOSTSFunixcp.sh',
   ensure => present,
   line => 'cp /etc/HOSTSFunix.txt /etc/hosts',
+  require => File['/etc/HOSTSFunixcp.sh'],
+}
+
+file { '/etc/HOSTSMTWRunixcp.sh':
+  ensure => present,
+}
+
+file_line { 'cpHOSTSMTWRunix':
+  path => '/etc/HOSTSFunixcp.sh',
+  ensure => present,
+  line => 'cp /etc/HOSTSFunix.txt /etc/hosts',
+  require => File['/etc/HOSTSMTWRunixcp.sh'],
+}
+
+file { '/etc/HOSTSFunixLScp.sh':
+  ensure => present,
+}
+
+file_line { 'cpHOSTSFunix':
+  path => '/etc/HOSTSFunixLScp.sh',
+  ensure => present,
+  line => 'cp /etc/HOSTSFunixLS.txt /etc/hosts',
+  require => File['/etc/HOSTSFunixLScp.sh'],
+}
+
+file { '/etc/HOSTSMTWRunixLScp.sh':
+  ensure => present,
+}
+
+file_line { 'cpHOSTSMTWRunixLS':
+  path => '/etc/HOSTSFunixLScp.sh',
+  ensure => present,
+  line => 'cp /etc/HOSTSFunixLS.txt /etc/hosts',
+  require => File['/etc/HOSTSMTWRunixLScp.sh'],
+}
+
+cron { 'CopyHOSTSMTWRunix':
+  ensure      => present,
+  command     => 'sh /etc/HOSTSMTWRunixcp.sh',
+  require => File_line ['cpHOSTSMTWRunix'],
+  user        => 'root',
+  weekday     => '0,1,2,3,4,6',
 }
 
 cron { 'CopyHOSTSFunix':
   ensure      => present,
   command     => 'sh /etc/HOSTSFunixcp.sh',
-  environment => # Any environment settings associated with this...
-  hour        => '15',
-  minute      => # The minute at which to run the cron job...
-  month       => # The month of the year.  Optional; if specified...
-  monthday    => # The day of the month on which to run the...
-  provider    => # The specific backend to use for this `cron...
-  special     => # A special value such as 'reboot' or 'annually'...
-  target      => # The name of the crontab file in which the cron...
-  user        => # The user who owns the cron job.  This user must...
-  weekday     => '0-4',
+  require => File_line ['cpHOSTSFunix'],
+  user        => 'root',
+  weekday     => '0,1,2,3,4,6',
+}
+
+cron { 'CopyHOSTSMTWRunixLS':
+  ensure      => present,
+  command     => 'sh /etc/HOSTSMTWRunixLScp.sh',
+  require => File_line ['cpHOSTSMTWRunixLS'],
+  user        => 'root',
+  weekday     => '0,1,2,3,4,6',
+}
+
+cron { 'CopyHOSTSFunix':
+  ensure      => present,
+  command     => 'sh /etc/HOSTSFunixLScp.sh',
+  require => File_line ['cpHOSTSFunixLS'],
+  user        => 'root',
+  weekday     => '0,1,2,3,4,6',
 }
 
 https://ask.puppet.com/question/1931/how-can-i-copy-client-files-to-a-puppet-master/
