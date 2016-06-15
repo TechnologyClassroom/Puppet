@@ -54,7 +54,7 @@ file { '/etc/HOSTSFunixLScp.sh':
   ensure => present,
 }
 
-file_line { 'cpHOSTSFunix':
+file_line { 'cpHOSTSFunixLS':
   path => '/etc/HOSTSFunixLScp.sh',
   ensure => present,
   line => 'cp /etc/HOSTSFunixLS.txt /etc/hosts',
