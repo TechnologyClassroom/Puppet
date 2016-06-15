@@ -10,7 +10,6 @@ os => {
 	}
 }
 
-
 Mac OS X Mavericks
 os => {
 	family => "Darwin",
@@ -51,6 +50,7 @@ os => {
 }
 
 
+su Computer\ Clubhouse -c sudo\ /opt/puppetlabs/bin/puppet\ apply\ /Users/bluehill/Downloads/Puppet-master/OSXhosts.pp
 
 Scheduled Tasks for Windows
 https://docs.puppet.com/puppet/4.5/reference/type.html#scheduledtask
