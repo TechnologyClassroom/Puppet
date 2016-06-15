@@ -177,7 +177,7 @@ cron { 'CopyHOSTSFunix':
   command     => 'sh /etc/HOSTSFunixcp.sh',
   require => File_line ['cpHOSTSFunix'],
   user        => 'root',
-  weekday     => '0,1,2,3,4,6',
+  weekday     => '5',
 }
 
 cron { 'CopyHOSTSMTWRunixLS':
@@ -193,7 +193,7 @@ cron { 'CopyHOSTSFunix':
   command     => 'sh /etc/HOSTSFunixLScp.sh',
   require => File_line ['cpHOSTSFunixLS'],
   user        => 'root',
-  weekday     => '0,1,2,3,4,6',
+  weekday     => '5',
 }
 
 https://ask.puppet.com/question/1931/how-can-i-copy-client-files-to-a-puppet-master/
