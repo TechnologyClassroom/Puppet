@@ -1,5 +1,8 @@
 # Useful weblinks
 
+# Scripting puppet master agent setup
+http://www.bogotobogo.com/DevOps/Puppet/puppet_setting_up_master_and_agent_with_scripts_EC2.php
+
 # Classes and parameterized classes
 https://docs.puppet.com/puppet/latest/reference/lang_classes.html
 
@@ -28,6 +31,9 @@ https://docs.puppet.com/puppet/latest/reference/type.html#cron
 # Copy files from agent to master
 https://ask.puppet.com/question/1931/how-can-i-copy-client-files-to-a-puppet-master/
 
+# Run bash script example
+https://ask.puppet.com/question/13844/how-to-deploy-bash-scripts-using-puppet/
+
 # file_line
 https://forge.puppet.com/puppetlabs/stdlib/types
 
@@ -44,6 +50,34 @@ package { 'puppet-lint':
 sudo gem install puppet-lint
 puppet-lint --fix /etc/puppet/modules
 
+
+
+service { 'resource title':
+  name       => # (namevar) The name of the service to run.  This name is...
+  ensure     => # Whether a service should be running.  Valid...
+  binary     => # The path to the daemon.  This is only used for...
+  control    => # The control variable used to manage services...
+  enable     => # Whether a service should be enabled to start at...
+  flags      => # Specify a string of flags to pass to the startup 
+  hasrestart => # Specify that an init script has a `restart...
+  hasstatus  => # Declare whether the service's init script has a...
+  manifest   => # Specify a command to config a service, or a path 
+  path       => # The search path for finding init scripts....
+  pattern    => # The pattern to search for in the process table...
+  restart    => # Specify a *restart* command manually.  If left...
+  start      => # Specify a *start* command manually.  Most...
+  status     => # Specify a *status* command manually.  This...
+  stop       => # Specify a *stop* command...
+  # ...plus any applicable metaparameters.
+}
+
+service { "updatehosts":
+    ensure => running,
+    enable => true,
+    require => Package["monit"],
+    #provider => systemd,
+    provider => launchd,
+}
 
 
 # Install file_line
