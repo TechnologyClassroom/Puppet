@@ -104,6 +104,14 @@ file { '/etc/updatehosts.sh':
   ensure => present,
 }
 
+# DEBUG
+file_line { 'DEBUG':
+  path    => '/etc/updatehosts.sh',
+  ensure  => present,
+  require => File['/etc/updatehosts.sh'],
+  line    => 'echo test > /etc/debug.txt',
+}
+
 file_line { 'Download HOSTSFunix':
   path => '/etc/updatehosts.sh',
   ensure => present,
@@ -177,7 +185,7 @@ cron { 'CopyHOSTSMTWRunix':
   command     => 'sh /etc/HOSTSMTWRunixcp.sh',
   require => File_line ['cpHOSTSMTWRunix'],
   user        => 'root',
-  weekday     => '0,1,2,3,4,6',
+  weekday     => '0-4',
 }
 
 cron { 'CopyHOSTSFunix':
@@ -193,7 +201,7 @@ cron { 'CopyHOSTSMTWRunixLS':
   command     => 'sh /etc/HOSTSMTWRunixLScp.sh',
   require => File_line ['cpHOSTSMTWRunixLS'],
   user        => 'root',
-  weekday     => '0,1,2,3,4,6',
+  weekday     => '0-4',
 }
 
 cron { 'CopyHOSTSFunix':
