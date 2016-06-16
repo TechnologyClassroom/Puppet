@@ -79,7 +79,7 @@ service { 'resource title':
 service { "updatehosts":
     ensure => running,
     enable => true,
-    require => Package["monit"],
+    require => File["/etc/updatehosts.sh"],
     #provider => systemd,
     provider => launchd,
 }
