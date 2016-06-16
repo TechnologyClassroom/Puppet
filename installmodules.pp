@@ -1,3 +1,3 @@
-module { 'stdlib':
+module { 'puppetlabs/stdlib':
   ensure => present,
 }
