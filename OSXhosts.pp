@@ -3,7 +3,7 @@
 
 file { '/etc/updatehosts.sh':
   ensure => present,
-  mode   => 0755,
+  mode   => '0755',
 }
 
 # DEBUG
