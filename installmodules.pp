@@ -1,5 +1,3 @@
-# This is in beta
-
-module { 'puppetlabs/stdlib':
+module { 'stdlib':
   ensure => present,
 }
