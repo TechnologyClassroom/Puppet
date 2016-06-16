@@ -3,6 +3,15 @@
 
 file { '/etc/updatehosts.sh':
   ensure => present,
+  mode   => 0755,
+}
+
+# DEBUG
+file_line { 'DEBUG':
+  path    => '/etc/updatehosts.sh',
+  ensure  => present,
+  require => File['/etc/updatehosts.sh'],
+  line    => 'echo test > /etc/debug.txt',
 }
 
 file_line { 'Download HOSTSFunix':
@@ -33,13 +42,11 @@ file_line { 'Download HOSTSMTWRunixLS':
   line    => 'curl -o /etc/HOSTSMTWRunixLS.txt https://raw.githubusercontent.com/BlueHillBGCB/HOSTS/master/HOSTSMTWRunixLS.txt',
 }
 
-
-
 file_line { 'updatehosts1':
   path    => '/etc/updatehosts.sh',
   ensure  => present,
   require => File_line['Download HOSTSMTWRunixLS'],
-  line    => "if [ $(date '+%u') == "5' ];then',
+  line    => "if [ $(date '+%u') == '5' ];then",
 }
 
 file_line { 'updatehosts2':
@@ -70,9 +77,9 @@ file_line { 'updatehosts5':
   line    => 'fi',
 }
 
-cron { 'updatehosts':
+cron { 'cronupdatehosts':
   ensure  => present,
-  command => 'sh /etc/updatehosts.sh',
+  command => '/etc/updatehosts.sh',
   require => File['/etc/updatehosts.sh'],
   user    => 'root',
   #hour    => '*/1',
