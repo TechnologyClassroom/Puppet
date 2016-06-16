@@ -6,14 +6,6 @@ file { '/etc/updatehosts.sh':
   mode   => '0755',
 }
 
-# DEBUG
-file_line { 'DEBUG':
-  path    => '/etc/updatehosts.sh',
-  ensure  => present,
-  require => File['/etc/updatehosts.sh'],
-  line    => 'echo test > /etc/debug.txt',
-}
-
 file_line { 'Download HOSTSFunix':
   path    => '/etc/updatehosts.sh',
   ensure  => present,
