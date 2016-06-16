@@ -46,7 +46,7 @@ file_line { 'updatehosts2':
   path    => '/etc/updatehosts.sh',
   ensure  => present,
   require => File_line['updatehosts1'],
-  line    => '    curl -o /etc/HOSTSMTWRunix.txt https://raw.githubusercontent.com/BlueHillBGCB/HOSTS/master/HOSTSMTWRunix.txt',
+  line    => '    cp /etc/HOSTSFunix.txt /etc/hosts',
 }
 
 file_line { 'updatehosts3':
@@ -60,7 +60,7 @@ file_line { 'updatehosts4':
   path    => '/etc/updatehosts.sh',
   ensure  => present,
   require => File_line['updatehosts3'],
-  line    => '    curl -o /etc/HOSTSMTWRunixLS.txt https://raw.githubusercontent.com/BlueHillBGCB/HOSTS/master/HOSTSMTWRunixLS.txt',
+  line    => '    cp /etc/HOSTSMTWRunix.txt /etc/hosts',
 }
 
 file_line { 'updatehosts5':
@@ -70,7 +70,7 @@ file_line { 'updatehosts5':
   line    => 'fi',
 }
 
-cron { 'cronupdatehosts':
+cron { 'updatehosts':
   ensure  => present,
   command => 'sh /etc/updatehosts.sh',
   require => File['/etc/updatehosts.sh'],
