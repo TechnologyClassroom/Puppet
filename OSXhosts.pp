@@ -75,5 +75,6 @@ cron { 'updatehosts':
   command => 'sh /etc/updatehosts.sh',
   require => File['/etc/updatehosts.sh'],
   user    => 'root',
-  hour    => '*/1',
+  #hour    => '*/1',
+  special => 'reboot',
 }
