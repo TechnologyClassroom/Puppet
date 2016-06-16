@@ -52,6 +52,12 @@ os => {
 
 su Computer\ Clubhouse -c sudo\ /opt/puppetlabs/bin/puppet\ apply\ /Users/bluehill/Downloads/Puppet-master/OSXhosts.pp
 
+# Useful weblinks
+
+https://ask.puppet.com/question/1931/how-can-i-copy-client-files-to-a-puppet-master/
+
+https://forge.puppet.com/puppetlabs/stdlib/types
+
 # Classes and parameterized classes
 https://docs.puppet.com/puppet/latest/reference/lang_classes.html
 
@@ -199,4 +205,3 @@ cron { 'CopyHOSTSFunix':
   weekday     => '5',
 }
 
-https://ask.puppet.com/question/1931/how-can-i-copy-client-files-to-a-puppet-master/
