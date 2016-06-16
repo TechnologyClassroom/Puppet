@@ -11,6 +11,9 @@ http://www.craigdunn.org/2012/05/239/
 http://garylarizza.com/blog/2014/02/17/puppet-workflow-part-2/
 https://docs.puppet.com/pe/latest/puppet_assign_configurations.html
 
+# NTP module as an example of how a modules should be built
+https://github.com/puppetlabs/puppetlabs-ntp
+
 # Scheduled Tasks for Windows
 https://docs.puppet.com/puppet/4.5/reference/type.html#scheduledtask
 
