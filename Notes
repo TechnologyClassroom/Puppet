@@ -6,11 +6,13 @@ http://www.bogotobogo.com/DevOps/Puppet/puppet_setting_up_master_and_agent_with_
 # Classes and parameterized classes
 https://docs.puppet.com/puppet/latest/reference/lang_classes.html
 
+# Roles and Profiles
+http://www.craigdunn.org/2012/05/239/
+http://garylarizza.com/blog/2014/02/17/puppet-workflow-part-2/
+https://docs.puppet.com/pe/latest/puppet_assign_configurations.html
+
 # Scheduled Tasks for Windows
 https://docs.puppet.com/puppet/4.5/reference/type.html#scheduledtask
-
-# Gepetto IDE
-https://github.com/puppetlabs/geppetto
 
 # Boilerplates
 https://github.com/example42/Example42-templates
@@ -36,6 +38,9 @@ https://ask.puppet.com/question/13844/how-to-deploy-bash-scripts-using-puppet/
 
 # file_line
 https://forge.puppet.com/puppetlabs/stdlib/types
+
+# Gepetto IDE
+https://github.com/puppetlabs/geppetto
 
 # librarian-puppet for managing modules
 http://librarian-puppet.com/
