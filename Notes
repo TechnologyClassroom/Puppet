@@ -31,6 +31,18 @@ https://ask.puppet.com/question/1931/how-can-i-copy-client-files-to-a-puppet-mas
 # file_line
 https://forge.puppet.com/puppetlabs/stdlib/types
 
+# librarian-puppet for managing modules
+http://librarian-puppet.com/
+sudo gem install librarian-puppet
+
+# puppet-lint for cleaning manifest
+http://puppet-lint.com/
+package { 'puppet-lint':
+  ensure   => '1.1.0',
+  provider => 'gem',
+}
+sudo gem install puppet-lint
+puppet-lint --fix /etc/puppet/modules
 
 
 
