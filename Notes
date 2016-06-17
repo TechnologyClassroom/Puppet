@@ -34,7 +34,7 @@ https://docs.puppet.com/puppet/latest/reference/types/service.html#service-provi
 https://docs.puppet.com/puppet/latest/reference/type.html#cron
 http://stackoverflow.com/questions/22552520/cron-job-not-running-created-by-puppet
 
-Arch does not come with cron.  To install use, sudo pacman -Sy cronie
+Arch does not come with cron.  To install use, sudo pacman -Sy cronie.  To start the service, run sudo systemctl enable cronie.service.
 
 # Copy files from agent to master
 https://ask.puppet.com/question/1931/how-can-i-copy-client-files-to-a-puppet-master/
