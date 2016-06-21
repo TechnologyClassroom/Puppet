@@ -3,6 +3,11 @@
 # Scripting puppet master agent setup
 http://www.bogotobogo.com/DevOps/Puppet/puppet_setting_up_master_and_agent_with_scripts_EC2.php
 
+# Puppet-agent download links
+https://docs.puppet.com/puppet/4.5/reference/install_linux.html
+https://docs.puppet.com/puppet/latest/reference/install_osx.html#download-the-os-x-puppet-agent-package
+https://docs.puppet.com/puppet/4.5/reference/install_windows.html#download-the-windows-puppet-agent-package
+
 # Classes and parameterized classes
 https://docs.puppet.com/puppet/latest/reference/lang_classes.html
 
