@@ -102,7 +102,12 @@ su Computer\ Clubhouse -c sudo\ /opt/puppetlabs/bin/puppet\ module\ install\ pup
 
 # Run puppet agent masterless for testing
 sudo /opt/puppetlabs/bin/puppet apply /Users/bluehill/Downloads/Puppet-master/OSXhosts.pp
-su Computer\ Clubhouse -c sudo\ /opt/puppetlabs/bin/puppet\ apply\ /Users/bluehill/Downloads/Puppet-master/OSXhosts.pp
+
+# Run puppet agent masterless for testing complete
+curl -o puppet-agent-1.5.2-1.osx10.9.dmg https://downloads.puppetlabs.com/mac/10.9/PC1/x86_64/puppet-agent-1.5.2-1.osx10.9.dmg
+open puppet-agent-1.5.2-1.osx10.9.dmg
+curl -o init.pp https://github.com/BlueHillBGCB/Puppet/raw/master/init.pp
+su Computer\ Clubhouse -c sudo\ /opt/puppetlabs/bin/puppet\ apply\ /Users/bluehill/Downloads/init.pp
 
 
 
