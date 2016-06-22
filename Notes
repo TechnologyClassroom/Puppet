@@ -21,6 +21,8 @@ https://github.com/puppetlabs/puppetlabs-ntp
 
 # Scheduled Tasks for Windows
 https://docs.puppet.com/puppet/4.5/reference/type.html#scheduledtask
+cd "Program Files\Puppet Labs\Puppet\bin
+puppet.bat resource scheduled_task
 
 # Boilerplates
 https://github.com/example42/Example42-templates
