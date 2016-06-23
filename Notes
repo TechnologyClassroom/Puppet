@@ -116,6 +116,25 @@ su Computer\ Clubhouse -c sudo\ /opt/puppetlabs/bin/puppet\ apply\ /Users/bluehi
 
 
 
+# Useful commands
+
+# List useful help on a resource
+puppet describe scheduled_task | less
+puppet describe user | less
+
+# Inspect resource
+puppet resource user root
+
+# Execute a piece of puppet code with -e switch
+puppet apply -e "user { 'bluehill': ensure => present, }"
+
+# Edit a resource in a text editor and apply immediately
+puppet resource -e user galatea
+
+
+
+
+# Manifest code snippets
 file { '/etc/updatehosts.sh':
   ensure => present,
 }
