@@ -22,14 +22,12 @@
 
 $asciiart = [ 'aview', 'bb', 'caca-utils', 'figlet', 'libaa-bin', 'sl', 'toilet', 'xaos' ]
 package { $asciiart: ensure => 'installed' }
-# Look into asciinema
 
 $avtools = [ 'libav-tools', 'vlc', 'youtube-dl' ]
 package { $avtools: ensure => 'installed' }
 
 $devtools = [ 'devscripts', 'dnsutils', 'git', 'p7zip', 'synaptic', 'xarchiver' ]
 package { $devtools: ensure => 'installed' }
-# Look into vagrant
 
 $DEWM = [ 'awesome', 'lxde-core' ]
 package { $DEWM: ensure => 'installed' }
