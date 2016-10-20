@@ -1,8 +1,25 @@
-# This manifest is in the beta testing phase.
-# This requires puppetlabs/stdlib module
+# init.pp
+# Michael McMahon
+# This file configures HOSTS to rotate between the files in https://github.com/TechnologyClassroom/HOSTS for GNU/Linux systems
+
+# PREREQUISITE: puppet agent
+# To apply, run this command
+# puppet apply init.pp
+# To install requisites, install UbuntuMinimal and run these commands:
+# sudo apt-get update
+# sudo apt-get install -y puppet
+# sudo puppet apply ubuntumin.pp
+
+$module_stdlib = 'puppetlabs-stdlib'
+exec { 'puppet_module_stdlib':
+	command => "puppet module install ${module_stdlib}",
+	unless  => "puppet module list | grep ${module_stdlib}",
+	path    => ['/bin', '/opt/puppetlabs/bin', '/usr/bin']
+} # based on zinovyev from http://stackoverflow.com/questions/16774980/can-i-install-puppet-modules-through-puppet-manifest
 
 file { '/etc/updatehosts.sh':
   ensure => present,
+  require => exec['puppet_module_stdlib'],
   mode   => '0755',
 }
 
