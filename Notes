@@ -246,3 +246,11 @@ cron { 'CopyHOSTSFunix':
   user        => 'root',
   weekday     => '5',
 }
+
+
+
+# Firefox modules
+https://github.com/nibalizer/puppet-module-firefox
+https://github.com/simp/pupmod-simp-mozilla
+
+
