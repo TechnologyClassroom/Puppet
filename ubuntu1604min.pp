@@ -64,7 +64,7 @@ $python = [ 'idle-python2.7', 'python-markdown', 'python-pygame', 'python-pip' ]
 package { $python: ensure => 'installed' }
 
 # Text editors include tools that help edit text.  Vi and nano are already included.
-$texteditors = [ 'leafpad', 'libreoffice', 'python-sphinx', 'sphinx-doc' ]
+$texteditors = [ 'calibre', 'leafpad', 'libreoffice', 'python-sphinx', 'sphinx-doc' ]
 package { $texteditors: ensure => 'installed' }
 
 # Web Server includes tools to run a local web server on your system.  With added sec and configuration, you could eliminate the need for hosting.
