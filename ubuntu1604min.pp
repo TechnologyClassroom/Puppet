@@ -36,7 +36,7 @@ package { $avtools: ensure => 'installed' }
 #package { $computervision: ensure => 'installed' }
 
 # Dev tools assist building and configuring programs and systems.
-$devtools = [ 'devscripts', 'dnsutils', 'git', 'p7zip', 'synaptic', 'xarchiver' ]
+$devtools = [ 'devscripts', 'dnsutils', 'git', 'p7zip', 'synaptic', 'xarchiver', 'xev' ]
 package { $devtools: ensure => 'installed' }
 
 # DE/WM provide Desktop Environments and Window Manager Graphical User Interfaces.
