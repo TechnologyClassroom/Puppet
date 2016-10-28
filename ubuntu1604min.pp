@@ -52,7 +52,7 @@ package { $fun: ensure => 'installed' }
 $graphic = [ 'feh', 'fontforge', 'gimp', 'icc-profiles-free', 'imagemagick', 'inkscape', 'krita', 'xfonts-100dpi' ]
 package { $graphic: ensure => 'installed' }
 
-# Internet includes tools that assist with the World Wide Web.
+# Internet includes tools that assist with the Internet.
 $Internet = [ 'aria2', 'curl', 'firefox', 'links2', 'midori', 'nmap', 'w3m', 'wicd' ]
 package { $Internet: ensure => 'installed' }
 
@@ -65,7 +65,7 @@ $python = [ 'idle-python2.7', 'python-markdown', 'python-pygame', 'python-pip' ]
 package { $python: ensure => 'installed' }
 
 # Text editors include tools that help edit text.  Vi and nano are already included.
-$texteditors = [ 'calibre', 'leafpad', 'libreoffice', 'python-sphinx', 'sphinx-doc' ]
+$texteditors = [ 'calibre', 'leafpad', 'libreoffice', 'pandoc', 'python-sphinx', 'sphinx-doc' ]
 package { $texteditors: ensure => 'installed' }
 
 # Web Server includes tools to run a local web server on your system.  With added sec and configuration, you could eliminate the need for hosting.
