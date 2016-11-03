@@ -36,7 +36,7 @@ package { $avtools: ensure => 'installed' }
 #package { $computervision: ensure => 'installed' }
 
 # Dev tools assist building and configuring programs and systems.
-$devtools = [ 'devscripts', 'dnsutils', 'git', 'p7zip', 'synaptic', 'tmux', 'x11-utils', 'xarchiver', 'xkbset' ]
+$devtools = [ 'devscripts', 'dnsutils', 'git', 'macchanger', 'p7zip', 'synaptic', 'tmux', 'x11-utils', 'xarchiver', 'xkbset' ]
 package { $devtools: ensure => 'installed' }
 
 
@@ -53,7 +53,7 @@ $graphic = [ 'feh', 'fontforge', 'gimp', 'icc-profiles-free', 'imagemagick', 'in
 package { $graphic: ensure => 'installed' }
 
 # Internet includes tools that assist with the Internet.
-$Internet = [ 'aria2', 'curl', 'firefox', 'links2', 'midori', 'nmap', 'w3m', 'wicd' ]
+$Internet = [ 'aria2', 'curl', 'firefox', 'links2', 'midori', 'network-manager', 'nmap', 'w3m' ]
 package { $Internet: ensure => 'installed' }
 
 # Phone dev includes tools that assist with Android and Ubuntu Touch.
