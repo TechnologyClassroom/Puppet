@@ -36,7 +36,7 @@ package { $avtools: ensure => 'installed' }
 #package { $computervision: ensure => 'installed' }
 
 # Dev tools assist building and configuring programs and systems.
-$devtools = [ 'devscripts', 'dnsutils', 'git', 'p7zip', 'synaptic', 'x11-utils', 'xarchiver', 'xkbset' ]
+$devtools = [ 'devscripts', 'dnsutils', 'git', 'p7zip', 'synaptic', 'tmux', 'x11-utils', 'xarchiver', 'xkbset' ]
 package { $devtools: ensure => 'installed' }
 
 
