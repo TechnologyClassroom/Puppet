@@ -23,19 +23,19 @@
 #	content => 'exec awesome',
 #}
 
-# ASCII art is generative art using characters instead of pixels.
+# ASCII Art is generative art using characters instead of pixels.
 $asciiart = [ 'aview', 'bb', 'caca-utils', 'figlet', 'libaa-bin', 'sl', 'toilet' ]
 package { $asciiart: ensure => 'installed' }
 
-# A/V tools assist converting, editing, and playing audio and video media content.
-$avtools = [ 'libav-tools', 'vlc', 'youtube-dl' ]
+# A/V Tools assist converting, editing, and playing audio and video media content.
+$avtools = [ 'audacity', 'blender', 'flowblade', 'kdenlive', 'libav-tools', 'ubuntustudio-video', 'vlc', 'youtube-dl' ]
 package { $avtools: ensure => 'installed' }
 
 # ComputerVision includes tools to program how a computer sees.
 #$computervision = [ 'opencv-data', 'opencv-doc', 'python-opencv' ]
 #package { $computervision: ensure => 'installed' }
 
-# Dev tools assist building and configuring programs and systems.
+# Dev Tools assist building and configuring programs and systems.
 $devtools = [ 'devscripts', 'dnsutils', 'git', 'macchanger', 'p7zip', 'synaptic', 'tmux', 'x11-utils', 'xarchiver', 'xkbset' ]
 package { $devtools: ensure => 'installed' }
 
@@ -57,7 +57,7 @@ $Internet = [ 'aria2', 'curl', 'firefox', 'links2', 'midori', 'network-manager',
 package { $Internet: ensure => 'installed' }
 # If you want more control with less ease-of-use with networking, replace network-manager with wicd.
 
-# Phone dev includes tools that assist with Android and Ubuntu Touch.
+# Phone Dev includes tools that assist with Android and Ubuntu Touch.
 $phonedev = [ 'android-tools-adb', 'android-tools-fastboot', 'ubuntu-sdk' ]
 package { $phonedev: ensure => 'installed' }
 
@@ -65,7 +65,7 @@ package { $phonedev: ensure => 'installed' }
 $python = [ 'idle-python2.7', 'python-markdown', 'python-pygame', 'python-pip' ]
 package { $python: ensure => 'installed' }
 
-# Text editors include tools that help edit text.  Vi and nano are already included.
+# Text Editors include tools that help edit text.  Vi and nano are already included.
 $texteditors = [ 'calibre', 'leafpad', 'libreoffice', 'pandoc', 'python-sphinx', 'sphinx-doc' ]
 package { $texteditors: ensure => 'installed' }
 
