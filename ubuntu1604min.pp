@@ -28,7 +28,7 @@ $asciiart = [ 'aview', 'bb', 'caca-utils', 'figlet', 'libaa-bin', 'sl', 'toilet'
 package { $asciiart: ensure => 'installed' }
 
 # A/V Tools assist converting, editing, and playing audio and video media content.
-$avtools = [ 'audacity', 'blender', 'flowblade', 'kdenlive', 'libav-tools', 'ubuntustudio-video', 'vlc', 'youtube-dl' ]
+$avtools = [ 'audacity', 'blender', 'flowblade', 'kdenlive', 'libav-tools', 'libimage-exiftool-perl', 'ubuntustudio-video', 'vlc', 'youtube-dl' ]
 package { $avtools: ensure => 'installed' }
 
 # ComputerVision includes tools to program how a computer sees.
