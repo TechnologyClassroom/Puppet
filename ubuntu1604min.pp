@@ -36,12 +36,12 @@ package { $avtools: ensure => 'installed' }
 #package { $computervision: ensure => 'installed' }
 
 # Dev Tools assist building and configuring programs and systems.
-$devtools = [ 'devscripts', 'dnsutils', 'git', 'gparted', 'inotify-tools', 'macchanger', 'p7zip', 'synaptic', 'tmux', 'x11-utils', 'xarchiver', 'xkbset' ]
+$devtools = [ 'cfengine3', 'devscripts', 'dnsutils', 'git', 'gparted', 'inotify-tools', 'macchanger', 'p7zip', 'synaptic', 'tmux', 'x11-utils', 'xarchiver', 'xkbset' ]
 package { $devtools: ensure => 'installed' }
 
 
 # DE/WM provide Desktop Environments and Window Manager Graphical User Interfaces.
-$DEWM = [ 'awesome', 'lxde-core' ]
+$DEWM = [ 'awesome', 'i3-wm', 'lxde-core' ]
 package { $DEWM: ensure => 'installed' }
 
 # Fun provides unnecessary programs that make a GNU/Linux system silly.
