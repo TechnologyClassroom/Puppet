@@ -36,7 +36,7 @@ package { $avtools: ensure => 'installed' }
 #package { $computervision: ensure => 'installed' }
 
 # Dev Tools assist building and configuring programs and systems.
-$devtools = [ 'cfengine3', 'devscripts', 'dnsutils', 'git', 'gparted', 'inotify-tools', 'macchanger', 'p7zip', 'synaptic', 'tmux', 'x11-utils', 'xarchiver', 'xkbset' ]
+$devtools = [ 'cfengine3', 'devscripts', 'dnsutils', 'git', 'gparted', 'inotify-tools', 'macchanger', 'nag'nagstamon', 'p7zip', 'synaptic', 'tmux', 'x11-utils', 'xarchiver', 'xkbset' ]
 package { $devtools: ensure => 'installed' }
 
 
@@ -72,3 +72,4 @@ package { $texteditors: ensure => 'installed' }
 # Web Server includes tools to run a local web server on your system.  With added sec and configuration, you could eliminate the need for hosting.
 $webserver = [ 'nginx', 'nodejs', 'npm', 'php', 'sqlite' ]
 package { $webserver: ensure => 'installed' }
+# nagios3 nagstamon
