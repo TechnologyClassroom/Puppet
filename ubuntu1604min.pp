@@ -62,7 +62,7 @@ $phonedev = [ 'android-tools-adb', 'android-tools-fastboot', 'ubuntu-sdk' ]
 package { $phonedev: ensure => 'installed' }
 
 # Python includes some useful python scripts.
-$python = [ 'idle-python2.7', 'python-markdown', 'python-pygame', 'python-pip' ]
+$python = [ 'idle-python2.7', 'python-markdown', 'python-pygame', 'python-pip', 'python3-pip' ]
 package { $python: ensure => 'installed' }
 
 # Text Editors include tools that help edit text.  Vi and nano are already included.
