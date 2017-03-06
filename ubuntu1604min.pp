@@ -41,7 +41,7 @@ package { $devtools: ensure => 'installed' }
 
 
 # DE/WM provide Desktop Environments and Window Manager Graphical User Interfaces.
-$DEWM = [ 'awesome', 'i3-wm', 'lxde-core' ]
+$DEWM = [ 'awesome', 'lxde-common', 'lxde-core', 'lxsession-logout' ]
 package { $DEWM: ensure => 'installed' }
 
 # Fun provides unnecessary programs that make a GNU/Linux system silly.
