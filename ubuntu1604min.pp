@@ -39,13 +39,12 @@ package { $avtools: ensure => 'installed' }
 $devtools = [ 'aptitude', 'cfengine3', 'devscripts', 'dnsutils', 'git', 'gparted', 'inotify-tools', 'macchanger', 'p7zip', 'qemu', 'rdesktop', 'synaptic', 'terminator', 'terminology', 'tmux', 'x11-utils', 'xarchiver', 'xkbset' ]
 package { $devtools: ensure => 'installed' }
 
-
 # DE/WM provide Desktop Environments and Window Manager Graphical User Interfaces.
 $DEWM = [ 'awesome', 'lxde-common', 'lxde-core', 'lxsession-logout' ]
 package { $DEWM: ensure => 'installed' }
 
 # Fun provides unnecessary programs that make a GNU/Linux system silly.
-$fun = [ 'bsdgames', 'cowsay', 'fortune-mod', 'mandelbulber', 'nethack-console', 'ninvaders', 'pi', 'python-renpy', 'renpy', 'xaos' ]
+$fun = [ 'bsdgames', 'cmus', 'cowsay', 'fortune-mod', 'mandelbulber', 'nethack-console', 'ninvaders', 'pi', 'python-renpy', 'renpy', 'xaos' ]
 package { $fun: ensure => 'installed' }
 
 # Graphic includes tools that view and edit pictures for graphic design.
