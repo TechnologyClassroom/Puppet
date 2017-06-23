@@ -57,8 +57,10 @@ package { $Internet: ensure => 'installed' }
 # If you want more control with less ease-of-use with networking, replace network-manager with wicd.
 
 # Phone Dev includes tools that assist with Android and Ubuntu Touch.
-$phonedev = [ 'android-tools-adb', 'android-tools-fastboot', 'ubuntu-sdk' ]
+$phonedev = [ 'android-tools-adb', 'android-tools-fastboot', 'fastboot' ]
 package { $phonedev: ensure => 'installed' }
+$phonepur = [ 'ubuntu-sdk' ]
+package { $phonedev: ensure => 'purged' }
 
 # Python includes some useful python scripts.
 $python = [ 'idle-python2.7', 'python-markdown', 'python-pygame', 'python-pip', 'python3-pip' ]
