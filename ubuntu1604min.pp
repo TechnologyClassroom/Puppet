@@ -44,7 +44,7 @@ $DEWM = [ 'awesome', 'lxde-common', 'lxde-core', 'lxsession-logout' ]
 package { $DEWM: ensure => 'installed' }
 
 # Fun provides unnecessary programs that make a GNU/Linux system silly.
-$fun = [ 'bsdgames', 'cmus', 'cowsay', 'fortune-mod', 'mandelbulber', 'nethack-console', 'ninvaders', 'pi', 'python-renpy', 'renpy', 'xaos' ]
+$fun = [ 'bsdgames', 'cmus', 'cowsay', 'fortune-mod', 'mandelbulber', 'nethack-console', 'ninvaders', 'pi', 'python-renpy', 'renpy', 'rig', 'xaos' ]
 package { $fun: ensure => 'installed' }
 
 # Graphic includes tools that view and edit pictures for graphic design.
