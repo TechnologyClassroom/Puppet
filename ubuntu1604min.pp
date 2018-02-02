@@ -52,7 +52,7 @@ $graphic = [ 'feh', 'fontforge', 'gimp', 'icc-profiles-free', 'imagemagick', 'in
 package { $graphic: ensure => 'installed' }
 
 # Internet includes tools that assist with the Internet.
-$Internet = [ 'aria2', 'curl', 'firefox', 'links2', 'midori', 'network-manager', 'nmap', 'w3m' ]
+$Internet = [ 'aria2', 'curl', 'firefox', 'links2', 'midori', 'network-manager', 'nmap', 'thunderbird', 'w3m' ]
 package { $Internet: ensure => 'installed' }
 # If you want more control with less ease-of-use with networking, replace network-manager with wicd.
 
