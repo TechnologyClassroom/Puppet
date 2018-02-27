@@ -9,7 +9,7 @@
 
 $module_stdlib = 'puppetlabs-stdlib'
 exec { 'puppet_module_stdlib':
-	command => "puppet module install ${module_stdlib}",
-	unless  => "puppet module list | grep ${module_stdlib}",
-	path    => ['/bin', '/opt/puppetlabs/bin', '/usr/bin']
+  command => "puppet module install ${module_stdlib}",
+  unless  => "puppet module list | grep ${module_stdlib}",
+  path    => ['/bin', '/opt/puppetlabs/bin', '/usr/bin']
 }
