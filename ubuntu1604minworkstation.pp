@@ -26,9 +26,9 @@ $av = [ 'libav-tools', 'vlc', 'youtube-dl' ]
 package { $av: ensure => 'installed' }
 
 # Dev Tools assist building and configuring programs and systems.
-$devtools = [ 'aptitude', 'devscripts', 'dnsutils', 'git', 'gparted',
-  'inotify-tools', 'numlockx', 'p7zip', 'qemu', 'rdesktop', 'remmina',
-  'synaptic', 'tmux', 'x11-utils', 'xarchiver', 'xkbset' ]
+$devtools = [ 'aptitude', 'cups', 'devscripts', 'dnsutils', 'git', 'gparted',
+  'inotify-tools', 'lxterminal', 'numlockx', 'p7zip', 'qemu', 'rdesktop',
+  'remmina', 'synaptic', 'tmux', 'x11-utils', 'xarchiver', 'xkbset' ]
 package { $devtools: ensure => 'installed' }
 
 # DE/WM provides Desktop Environments and Window Manager GUIs.
