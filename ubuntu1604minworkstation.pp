@@ -32,7 +32,7 @@ $devtools = [ 'aptitude', 'devscripts', 'dnsutils', 'git', 'gparted',
 package { $devtools: ensure => 'installed' }
 
 # DE/WM provides Desktop Environments and Window Manager GUIs.
-$dewm = [ 'awesome', 'lxde-common', 'lxde-core', 'lxsession-logout' ]
+$dewm = [ 'awesome', 'lightdm', 'lxde-common', 'lxde-core', 'lxsession-logout' ]
 package { $dewm: ensure => 'installed' }
 
 # Fun provides unnecessary programs that make a GNU/Linux system silly.
@@ -46,16 +46,15 @@ package { $graphic: ensure => 'installed' }
 
 # Internet includes tools that assist with the Internet.
 $internet = [ 'aria2', 'curl', 'firefox', 'links2', 'midori', 'network-manager',
-  'nmap', 'w3m' ]
+  'nmap', 'thunderbird', 'w3m' ]
 package { $internet: ensure => 'installed' }
 # If you want more control with less ease-of-use with networking, replace
 # network-manager with wicd.
 
 # Python includes some useful python scripts.
-$python = [ 'idle-python2.7', 'python-markdown', 'python-pygame', 'python-pip',
-  'python3-pip' ]
+$python = [ 'idle3', 'python-markdown', 'python-pygame', 'python3-pip' ]
 package { $python: ensure => 'installed' }
 
 # Text Editors include tools that help edit text.
-$texteditors = [ 'calibre', 'leafpad', 'libreoffice' ]
+$texteditors = [ 'calibre', 'leafpad', 'libreoffice', 'vim' ]
 package { $texteditors: ensure => 'installed' }

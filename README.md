@@ -8,7 +8,7 @@ Michael McMahon
 [Puppet](https://puppet.com/) is a
 [DevOps](https://en.wikipedia.org/wiki/DevOps) tool that uses
 [declaritive programming](https://en.wikipedia.org/wiki/Declarative_programming)
-to set configurations on systems without saying how they should get to that
+to manage configurations on systems without saying how they should get to that
 point.  Puppet takes care of the middle steps.
 
 Puppet Manifests:

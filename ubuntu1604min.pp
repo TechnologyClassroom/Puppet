@@ -16,8 +16,8 @@
 #	ensure => installed,
 #}
 
-# Replace 'noob' with your username.  This is required for startx to work.
-#file { '/home/noob/.xinitrc':
+# Replace 'user' with your username.  This is required for startx to work.
+#file { '/home/user/.xinitrc':
 #	ensure => present,
 #	require => Package['awesome'],
 #	content => 'exec awesome',
@@ -45,7 +45,7 @@ $devtools = [ 'aptitude', 'cfengine3', 'devscripts', 'dnsutils', 'git',
 package { $devtools: ensure => 'installed' }
 
 # DE/WM provides Desktop Environments and Window Manager GUIs.
-$dewm = [ 'awesome', 'lxde-common', 'lxde-core', 'lxsession-logout' ]
+$dewm = [ 'awesome', 'lightdm', 'lxde-common', 'lxde-core', 'lxsession-logout' ]
 package { $dewm: ensure => 'installed' }
 
 # Fun provides unnecessary programs that make a GNU/Linux system silly.
@@ -72,13 +72,12 @@ $phonepur = [ 'ubuntu-sdk' ]
 package { $phonepur: ensure => 'purged' }
 
 # Python includes some useful python scripts.
-$python = [ 'idle-python2.7', 'python-markdown', 'python-pygame', 'python-pip',
-  'python3-pip' ]
+$python = [ 'idle3', 'python-markdown', 'python-pygame', 'python3-pip' ]
 package { $python: ensure => 'installed' }
 
 # Text Editors include tools that help edit text.
-$texteditors = [ 'calibre', 'leafpad', 'libreoffice', 'pandoc', 'python-sphinx',
-  'sphinx-doc' ]
+$texteditors = [ 'calibre', 'gedit', 'leafpad', 'libreoffice', 'notepadqq',
+  'python3-sphinx', 'vim' ]
 package { $texteditors: ensure => 'installed' }
 
 # Web Server includes tools to run a local web server on your system.
