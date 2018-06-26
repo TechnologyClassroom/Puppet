@@ -24,3 +24,43 @@ Bash helper scripts:
 - archsetup.sh helps install puppet and stdlib for Arch Linux.
 - installmodules.sh installs stdlib.
 - macXX.XXsetup.sh files help install puppet and stdlib for Mac systems.
+
+## Bolt
+
+Bolt is a newer agent-less configuration management tool complementing puppet.
+
+### Installing bolt on Ubuntu 16.04
+
+```
+sudo apt update
+sudo apt install -y ruby-dev
+sudo gem install bolt
+```
+
+### Configuring bolt.yml
+
+Edit the ```~/.puppetlabs/bolt.yml``` file.
+
+```
+---
+modulepath: "~/.puppetlabs/bolt-code/site:~/.puppetlabs/bolt-code/modules"
+concurrency: 10
+format: human
+log:
+  console:
+    level: warn
+  ~/.puppetlabs/bolt/debug.log:
+    level: debug
+    append: false
+ssh:
+  host-key-check: false
+  private-key: ~/.ssh/id_rsa
+```
+
+### Hello World
+
+Receive the hostname from a node.
+
+```
+bolt command run hostname --nodes root@10.12.17.16
+```
