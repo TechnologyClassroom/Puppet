@@ -38,10 +38,10 @@ package { $av: ensure => 'installed' }
 #package { $computervision: ensure => 'installed' }
 
 # Dev Tools assist building and configuring programs and systems.
-$devtools = [ 'aptitude', 'cfengine3', 'cups', 'devscripts', 'dnsutils', 'git',
-  'gparted', 'inotify-tools', 'lxterminal', 'macchanger', 'numlockx', 'p7zip',
-  'qemu', 'rdesktop', 'remmina', 'synaptic', 'terminator', 'terminology',
-  'tmux', 'x11-utils', 'xarchiver', 'xkbset' ]
+$devtools = [ 'aptitude', 'cups', 'devscripts', 'dnsutils', 'git', 'gparted',
+  'inotify-tools', 'lxterminal', 'macchanger', 'numlockx', 'p7zip', 'qemu',
+  'rdesktop', 'remmina', 'synaptic', 'terminator', 'tmux', 'virt-manager',
+  'x11-utils', 'xarchiver', 'xkbset' ]
 package { $devtools: ensure => 'installed' }
 
 # DE/WM provides Desktop Environments and Window Manager GUIs.
@@ -60,7 +60,7 @@ package { $graphic: ensure => 'installed' }
 
 # Internet includes tools that assist with the Internet.
 $internet = [ 'aria2', 'curl', 'firefox', 'links2', 'midori', 'network-manager',
-  'nmap', 'thunderbird', 'w3m' ]
+  'nmap', 'thunderbird', 'w3m', 'wget' ]
 package { $internet: ensure => 'installed' }
 # If you want more control with less ease-of-use with networking, replace
 # network-manager with wicd.
@@ -77,11 +77,11 @@ package { $python: ensure => 'installed' }
 
 # Text Editors include tools that help edit text.
 $texteditors = [ 'calibre', 'gedit', 'leafpad', 'libreoffice', 'notepadqq',
-  'python3-sphinx', 'vim' ]
+  'python3-sphinx', 'texlive', 'vim' ]
 package { $texteditors: ensure => 'installed' }
 
 # Web Server includes tools to run a local web server on your system.
 # With added sec and configuration, you could eliminate the need for hosting.
-$webserver = [ 'nginx', 'nodejs', 'npm', 'php', 'sqlite' ]
+$webserver = [ 'libtext-lorem-perl', 'mysql-server', 'nginx', 'php-mysql' ]
 package { $webserver: ensure => 'installed' }
 # nagios3 nagstamon
